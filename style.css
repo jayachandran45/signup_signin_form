@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #cccccc;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.flex-container{
+    display: flex;
+    min-height: 80vh;
+    min-width: 70vw;
+}
+.detail-component{
+    background-color: orangered;
+    max-width: 35vw;
+    min-width: 35vw;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.detail-component h1{
+    letter-spacing: 1px;
+}
+.detail-component p{
+    letter-spacing: .5px;
+}
+.detail-component button{
+    letter-spacing: .7px;
+}
+.detail-component > * {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+.detail-component button {
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: orangered;
+    border: 2px solid #ffffff;
+}
+.detail-component  button:focus{
+    outline: none;
+    border: 2px solid #cccccc;
+    color: #cccccc;
+}
+.form-component{
+    background-color: #ffffff;
+    max-width: 35vw;
+    min-width: 35vw;
+    text-align: center;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-component h1{
+    letter-spacing: 1px;
+}
+.form-component > *{
+    margin: 10px 0px;
+}
+.form-component  div i {
+    margin: 0 7px;
+}
+.form-component  div i:hover{
+    cursor: pointer;
+}
+.form-component  form input{
+    display: block;
+    margin: 10px auto;
+    padding: 4px;
+    letter-spacing: .6px;
+}
+.form-component button {
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: orangered;
+    border: 2px solid #ffffff;
+    letter-spacing: .7px;
+}
+.form-component button:focus{
+    outline: none;
+    border: 2px solid #cccccc;
+    color: #cccccc;
+}
+@media (max-width: 600px){
+    .flex-container{
+        flex-direction: column;
+        color: green;
+        min-height: 0;
+    }
+    .detail-component{
+        z-index: -5;
+        position: relative;
+        min-width: 90vw;
+    }
+    .form-component{
+        position: absolute;
+        z-index: 1;
+        display: none;
+        min-width: 90vw;
+    }
+}
